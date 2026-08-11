@@ -1,0 +1,398 @@
+/* Reset dasar dan pengaturan font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- ANIMASI TRANSISI HALAMAN --- */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px); /* Mulai dari posisi 30px lebih tinggi */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Kembali ke posisi asli */
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px); /* Mulai dari posisi 50px di sebelah kiri */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px); /* Mulai dari posisi 50px di sebelah kanan */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #111111 100%);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    min-height: 100vh;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Navigasi - Tema Gelap Peat Glassmorphism */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    /* Background hitam transparan */
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Bayangan halus agar menu terlihat mengambang */
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.05); /* Bayangan merah super tipis */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: slideDown 0.6s ease-out forwards;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    /* Logo menggunakan warna merah terang menyala agar POP */
+    color: #ef4444; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* Teks menu abu-abu terang */
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    /* Teks menu putih penuh saat hover */
+    color: #ffffff;
+}
+
+/* Bagian Header / Beranda */
+header {
+    text-align: left; /* Mengubah teks menjadi rata kiri */
+    padding: 7rem 5% 8rem; /* Menambah jarak atas agar lebih lega */
+    background: transparent;
+    border-bottom: 1px solid #f3f4f6;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+header h1 {
+    font-size: 6rem; /* Ukuran font raksasa ala Framer */
+    font-weight: 1000; /* Dibuat sangat tebal */
+    margin-bottom: 1.5rem;
+    letter-spacing: -4.5px; /* Jarak antar huruf dirapatkan agar modern */
+    color: #ffffff;
+    line-height: 1;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+header h3 {
+    font-size: 2.5rem; /* Ukuran font raksasa ala Framer */
+    font-weight: 200; /* Dibuat sangat tebal */
+    margin-bottom: 1rem;
+    letter-spacing: -2.5px; /* Jarak antar huruf dirapatkan agar modern */
+    color: #ffffff;
+    line-height: 1;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+header p {
+    font-size: 1.25rem;
+    color: #d7d7d7;
+    max-width: 700px; /* Lebar teks dibatasi agar enak dibaca */
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+header p1 {
+    font-size: 1rem;
+    color: #d7d7d7;
+    max-width: 700px; /* Lebar teks dibatasi agar enak dibaca */
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Tombol Global - Tetap Merah Terang untuk Contrast */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #dc2626; /* Merah Utama Cukup Gelap */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    /* Bayangan merah */
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+.btn:hover {
+    background-color: #ef4444; /* Merah menyala saat hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+}
+
+/* Jarak antar section */
+section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/* Footer / Kontak - Hitam Peat, menyatu dengan body */
+footer {
+    text-align: center;
+    padding: 5rem 5% 3rem;
+    background-color: transparent; /* Transparan agar ikut gradasi body */
+    color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Khusus tombol di area footer agar sangat pop */
+footer .btn {
+    background-color: #ffffff; /* Tombol putih di footer agar sangat kontras */
+    color: #000000; /* Teks hitam */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+footer .btn:hover {
+    background-color: #f8fafc;
+    color: #000000;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.copyright {
+    margin-top: 5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.3) !important; /* Sangat pudar */
+}
+
+/* Kontainer Tombol Sosial Media */
+.social-links {
+    display: flex;
+    gap: 1rem; /* Jarak antar tombol */
+    margin-top: 2.5rem; /* Jarak dari teks bio di atasnya */
+    margin-bottom: 2.5rem; /* Jarak ke bawah agar tidak terlalu menempel ke footer */
+    flex-wrap: wrap; /* Memastikan tombol turun ke bawah dengan rapi jika dibuka di layar kecil/HP */
+    animation: slideInLeft 1.2s ease-out forwards;
+}
+
+
+/* Desain Tombol Sosial Media (Gaya Outline) */
+.social-btn {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8); /* Warna teks abu-abu terang */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Garis tepi putih transparan */
+    border-radius: 50px; /* Membuat bentuk tombol menjadi kapsul/pil */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Efek Saat Disentuh Mouse (Hover) */
+/* Efek Hover Khusus LinkedIn (Biru Profesional) */
+.btn-linkedin:hover {
+    background-color: #0077b5;
+    border-color: #0077b5;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 119, 181, 0.3);
+}
+
+/* Efek Hover Khusus Instagram (Gradasi Hangat) */
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent; /* Garis tepi dihilangkan karena background sudah bergradasi */
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(225, 48, 108, 0.3);
+}
+
+/* Efek Hover Khusus X / Twitter (Putih Pekat & Teks Hitam) */
+.btn-x:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #000000; /* Teks menjadi hitam agar menonjol di background putih */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Efek Hover Khusus YouTube (Merah Terang) */
+.btn-youtube:hover {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* --- HALAMAN KONTAK --- */
+.contact-section {
+    padding: 5rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Membagi layout menjadi 2 kolom */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Agar form turun ke bawah jika dibuka di HP */
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-left {
+    flex: 1;
+    min-width: 300px;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.contact-right {
+    flex: 1;
+    min-width: 300px;
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Desain Teks Email & Ikon Copy */
+.email-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.email-text i {
+    cursor: pointer;
+    color: #888888;
+    transition: color 0.3s;
+}
+
+.email-text i:hover {
+    color: #ef4444; /* Ikon berubah merah saat disentuh */
+}
+
+/* Tata Letak Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Desain Input (Nama, Email, dan Area Teks) */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #111111; /* Background input abu-abu sangat gelap */
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: #1a1a1a; /* Sedikit lebih terang saat diketik */
+}
+
+/* Warna Placeholder (teks bayangan di dalam input) */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Menghilangkan tanda resize di sudut textarea agar rapi */
+.contact-form textarea {
+    resize: none; 
+}
+
+/* Tombol Submit */
+.btn-submit {
+    padding: 1.2rem;
+    background-color: #333333; /* Abu-abu gelap mirip di referensi gambar */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #ef4444; /* Berubah menjadi aksen merah websitemu */
+    transform: translateY(-2px);
+}

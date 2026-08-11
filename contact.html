@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Reis Raja</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">ReiszSpace.</a>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="progress.html">MyProgress</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="beranda">
+        <h1>Contact Me</h1>
+        <p>Contact me if u want to!</p>
+        <h2>Contact me at :</h2>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/reisrajaana" target="_blank" class="social-btn btn-linkedin">
+                <i class="fa-brands fa-linkedin"></i> Reach Me
+            </a>
+            <a href="https://www.instagram.com/rejsraja/" target="_blank" class="social-btn btn-instagram">
+                <i class="fa-brands fa-instagram"></i> DM Me
+            </a>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-wrapper">
+            <!-- Kolom Kiri: Info Email -->
+            <div class="contact-left">
+                <p class="email-text">
+                    <!-- TAG SPAN SUDAH DIPERBAIKI DAN DIBERI ID -->
+                    <span id="email-address">rajaatallah22@gmail.com</span>
+                    <i class="fa-regular fa-copy" title="Copy Email" onclick="copyEmail()"></i>
+                </p>
+            </div>
+
+            <!-- Kolom Kanan: Form -->
+            <div class="contact-right">
+                <form action="https://formspree.io/f/mwleovyo" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Write your message here" rows="6" required></textarea>
+                    <button type="submit" class="btn-submit">Send It!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function copyEmail() {
+            var emailText = document.getElementById("email-address").innerText;
+            navigator.clipboard.writeText(emailText).then(function() {
+                alert("Email berhasil disalin: " + emailText);
+            }).catch(function(err) {
+                console.error("Gagal menyalin email: ", err);
+            });
+        }
+    </script>
+
+</body> <!-- Penutup body dipindah ke paling bawah -->
+</html>
