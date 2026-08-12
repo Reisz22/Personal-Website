@@ -127,6 +127,16 @@ header h1 {
     animation: slideInLeft 0.8s ease-out forwards;
 }
 
+header h2 {
+    font-size: 2rem; /* Ukuran font raksasa ala Framer */
+    font-weight: 1000; /* Dibuat sangat tebal */
+    margin-bottom: 1rem;
+    margin-top: 6rem; 
+    letter-spacing: -1px; /* Jarak antar huruf dirapatkan agar modern */
+    color: #ffffff;
+    line-height: 1;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
 header h3 {
     font-size: 2.5rem; /* Ukuran font raksasa ala Framer */
     font-weight: 200; /* Dibuat sangat tebal */
@@ -235,7 +245,7 @@ footer .btn:hover {
 .social-links {
     display: flex;
     gap: 1rem; /* Jarak antar tombol */
-    margin-top: 2.5rem; /* Jarak dari teks bio di atasnya */
+    margin-top: 1rem; /* Jarak dari teks bio di atasnya */
     margin-bottom: 2.5rem; /* Jarak ke bawah agar tidak terlalu menempel ke footer */
     flex-wrap: wrap; /* Memastikan tombol turun ke bawah dengan rapi jika dibuka di layar kecil/HP */
     animation: slideInLeft 1.2s ease-out forwards;
@@ -395,4 +405,109 @@ footer .btn:hover {
 .btn-submit:hover {
     background-color: #ef4444; /* Berubah menjadi aksen merah websitemu */
     transform: translateY(-2px);
+}
+
+
+.skills-category {
+    margin-bottom: 1.5rem;
+}
+
+.skills-category h4 {
+    font-size: 1.1rem;
+    color: #aaaaaa;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Desain Lencana (Badge) */
+.skill-tag {
+    background-color: #111111; 
+    border: 1px solid #333333; 
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px; 
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+/* Memberi warna aksen merah pada ikon di dalam lencana */
+.skill-tag i {
+    color: #ef4444; 
+}
+
+/* Efek saat lencana disentuh mouse */
+.skill-tag:hover {
+    border-color: #ef4444; 
+    transform: translateY(-2px); 
+}
+
+/* Visual Studio Code (Biru) */
+.skill-tag.tool-vscode:hover { 
+    background: linear-gradient(45deg, #003a61, #007ACC);
+    border-color: #007ACC; 
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 119, 181, 0.3);
+}
+.skill-tag.tool-vscode:hover i {
+    color: #ffffff; 
+}
+
+/* Code Blocks (Hijau) */
+.skill-tag.tool-codeblocks:hover { 
+    background: linear-gradient(45deg, #2E7D32, #4CAF50);
+    border-color: #4CAF50; 
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(49, 231, 89, 0.3);
+}
+.skill-tag.tool-codeblocks:hover i {
+     color: #ffffff; 
+    }
+
+/* Canva (Cyan / Biru Muda) */
+.skill-tag.tool-canva:hover {
+     background: linear-gradient(45deg, #00C4CC, #7D2AE8);
+     border-color: #00C4CC; 
+     box-shadow: 0 6px 15px rgba(0, 196, 204, 0.3);
+}
+.skill-tag.tool-canva:hover i {
+     color: #ffffff; 
+}
+
+/* Figma (Merah Bata / Oranye) */
+.skill-tag.tool-figma:hover {
+     background: linear-gradient(45deg, #F24E1E, #A259FF, #1ABCFE);
+     box-shadow: 0 6px 15px rgba(242, 78, 30, 0.3);
+}
+.skill-tag.tool-figma:hover i {
+     color: #ffffff; 
+}
+
+/* Medibang Paint Pro (Pink Kemerahan) */
+.skill-tag.tool-medibang:hover { 
+    background: linear-gradient(45deg, #ff5d12, #15efff, #33bb0a);
+    border-color: #4effff; 
+    box-shadow: 0 6px 15px rgba(78, 255, 255, 0.3);
+}
+.skill-tag.tool-medibang:hover i {
+     color: #ffffff; 
+}
+
+/* Capcut (Putih Bersih) */
+.skill-tag.tool-capcut:hover {
+    background: linear-gradient(45deg, #FFFFFF, #cacaca);
+    border-color: #FFFFFF; 
+    color: #000000;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.342);
+}
+.skill-tag.tool-capcut:hover i {
+     color: #000000; 
 }
