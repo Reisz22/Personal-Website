@@ -151,7 +151,7 @@ header p {
     font-size: 1.25rem;
     color: #d7d7d7;
     max-width: 700px; /* Lebar teks dibatasi agar enak dibaca */
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
     line-height: 1.8;
     animation: slideInLeft 0.8s ease-out forwards;
 }
@@ -190,13 +190,29 @@ section {
     padding: 5rem 5%;
     max-width: 1200px;
     margin: 0 auto;
+    animation: slideInLeft 0.8s ease-out forwards;
 }
 
 section h2 {
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
     text-align: center;
     color: #ffffff;
+}
+
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    text-align: left;
+    color: #ffffff;
+}
+
+section p {
+    font-size: 1.3rem;
+    text-align: left;
+    color: #d7d7d7;
 }
 
 
@@ -211,6 +227,7 @@ footer {
 
 footer h2 {
     margin-bottom: 1rem;
+    text-align: center;
     color: #ffffff;
 }
 
@@ -220,6 +237,7 @@ footer p {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 /* Khusus tombol di area footer agar sangat pop */
@@ -583,5 +601,12 @@ footer .btn:hover {
     color: #aaaaaa;
     line-height: 1.5;
     margin-bottom: 0;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 700px; /* Tinggi standar yang nyaman untuk layar HP Figma */
+    border: none !important;
+    border-radius: 12px;
 }
 
